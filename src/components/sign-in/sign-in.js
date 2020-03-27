@@ -40,6 +40,7 @@ export default class SignIn extends Component {
         <form onSubmit={this.handleSubmit}>
           <FormInput
             name="email"
+            type="email"
             value={this.state.email}
             handleChange={this.handleChange}
             label="email"
@@ -47,6 +48,7 @@ export default class SignIn extends Component {
           />
           <FormInput
             name="password"
+            type="password"
             value={this.state.password}
             handleChange={this.handleChange}
             label="password"
