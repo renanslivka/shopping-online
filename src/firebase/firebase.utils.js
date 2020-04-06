@@ -10,7 +10,7 @@ const config = {
   storageBucket: "shopping-online-shalom.appspot.com",
   messagingSenderId: "559349726688",
   appId: "1:559349726688:web:9bb7078ba2339de27abf85",
-  measurementId: "G-8N7QPSZZE4"
+  measurementId: "G-8N7QPSZZE4",
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -28,7 +28,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displaName,
         email,
         createrAt,
-        additionalData
+        additionalData,
       });
     } catch (error) {
       console.log("error creating user", error.message);
@@ -44,21 +44,21 @@ export const addCollectionAndDocuments = async (
   const collectionRef = firestore.collection(collectionKey);
 
   const batch = firestore.batch();
-  objectsToAdd.forEach(obj => {
+  objectsToAdd.forEach((obj) => {
     const newDocRef = collectionRef.doc();
     batch.set(newDocRef, obj);
   });
   return await batch.commit();
 };
 
-export const convertCollectionsSnapshotToMap = collections => {
-  const transformedCollection = collections.docs.map(doc => {
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformedCollection = collections.docs.map((doc) => {
     const { title, items } = doc.data();
     return {
       routeName: encodeURI(title.toLowerCase()),
       id: doc.id,
       title,
-      items
+      items,
     };
   });
   return transformedCollection.reduce((accumulator, collection) => {
@@ -69,11 +69,20 @@ export const convertCollectionsSnapshotToMap = collections => {
 
 firebase.initializeApp(config);
 
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      unsubscribe();
+      resolve(userAuth);
+    }, reject);
+  });
+};
+
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: "select_account" });
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: "select_account" });
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;
