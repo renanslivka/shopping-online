@@ -8,7 +8,7 @@ const StripeCheckoutButton = ({ price }) => {
 
   const onToken = (token) => {
     axios({
-      url: "payment",
+      url: "https://shopping-online-server.herokuapp.com/payment",
       method: "post",
       data: {
         amount: priceForStripe,
