@@ -11,14 +11,21 @@ import {
   LogoContainer,
   OptionsContainer,
   OptionLink,
+  Wrapper,
 } from "./header.styles";
 import { signOutStart } from "../../redux/user/user.action";
+import { CSSTransition } from "react-transition-group";
 
 const Header = ({ currentUser, hidden, signOutStart }) => (
   <HeaderContainer>
     <LogoContainer to="/">
       <Logo className="logo" />
     </LogoContainer>
+    <Wrapper>
+      <CSSTransition in={hidden} timeout={300} classNames="slide" unmountOnExit>
+        <CartDropdown />
+      </CSSTransition>
+    </Wrapper>
     <OptionsContainer>
       <OptionLink to="/shop">SHOP</OptionLink>
       <OptionLink to="/shop">CONTACT</OptionLink>
@@ -31,7 +38,6 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
       )}
       <CartIcon />
     </OptionsContainer>
-    {hidden ? null : <CartDropdown />}
   </HeaderContainer>
 );
 

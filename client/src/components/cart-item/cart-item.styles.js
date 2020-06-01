@@ -5,10 +5,12 @@ export const CartItemContainer = styled.div`
   display: flex;
   height: 80px;
   margin-bottom: 15px;
+  padding: 10px 10px;
+  border-bottom: 1px solid lightgrey;
 `;
 
 export const CartItemImage = styled.img`
-  width: 30%;
+  width: 20%;
 `;
 
 export const ItemDetailsContainer = styled.div`
@@ -18,4 +20,11 @@ export const ItemDetailsContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 10px 20px;
+`;
+
+export const RemoveButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
 `;
