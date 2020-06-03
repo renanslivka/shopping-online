@@ -2,6 +2,7 @@ import React, { useEffect, lazy, Suspense } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 import { connect } from "react-redux";
 import { checkUserSession } from "./redux/user/user.action";
 import { createStructuredSelector } from "reselect";
@@ -9,7 +10,6 @@ import { selectCurrentUser } from "./redux/user/user.selector";
 import { GlobalStyle } from "./global.styles";
 import Spinner from "./components/spinner/spinner";
 import ErrorBoundary from "./components/error-boundary/error-boundary";
-import "./App.css";
 
 const HomePage = lazy(() => import("./pages/homepage/homepage"));
 const ShopPage = lazy(() => import("./pages/shop/shop"));
@@ -44,6 +44,7 @@ const App = ({ checkUserSession, currentUser }) => {
           </Suspense>
         </ErrorBoundary>
       </Switch>
+      <Footer />
     </div>
   );
 };

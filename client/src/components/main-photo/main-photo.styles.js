@@ -8,9 +8,7 @@ export const MainPhotoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 7.5px 15px;
   overflow: hidden;
-
   @media screen and (max-width: 800px) {
     height: 200px;
   }
@@ -21,11 +19,14 @@ export const BackgroundPhotoContainer = styled.img`
   height: 100%;
   background-size: cover;
   background-position: center;
+  @media screen and (max-width: 800px) {
+    height: 200px;
+  }
 `;
 
 export const ContentContainer = styled.div`
   height: 20%;
-  width: 40%;
+
   padding: 0 25px;
   display: flex;
   flex-direction: column;
@@ -34,23 +35,49 @@ export const ContentContainer = styled.div`
   background-color: white;
   opacity: 0.7;
   position: absolute;
+  @media screen and (max-width: 800px) {
+    height: 100px;
+  }
 `;
 
 export const ContentTitle = styled.span`
   font-weight: bold;
   margin-bottom: 6px;
-  font-size: 2em;
+  font-size: 4em;
   color: #4a4a4a;
+  @media screen and (max-width: 800px) {
+    height: 200px;
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
 `;
 
 export const ContentSubtitle = styled.span`
   font-weight: lighter;
   font-size: 16px;
+  color: white;
+  width:208px;
+  height:36px;
+  background-color: #303132;
+  justify-content: center;
+  
+  display: flex;
+  align-items: center;
   &:hover {
     cursor: pointer;
-
-    & .content {
+    border: solid 0.5px;
+    background-color: #fff;
+    color: #303132;
+    border-color: black;
+  }
+    &.content {
       opacity: 0.9;
     }
+  }
+  @media screen and (max-width: 800px) {
+    height: 50px;
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+    width: 100px;    
   }
 `;

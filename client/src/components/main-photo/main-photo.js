@@ -14,11 +14,13 @@ const linkUrl = "shop";
 
 const MainPhoto = ({ history, match }) => {
   return (
-    <MainPhotoContainer onClick={() => history.push(`${match.url}${linkUrl}`)}>
+    <MainPhotoContainer>
       <BackgroundPhotoContainer className="background-photo" src={photo} />
       <ContentContainer>
         <ContentTitle>{title.toUpperCase()}</ContentTitle>
-        <ContentSubtitle>SHOP NOW</ContentSubtitle>
+        <ContentSubtitle onClick={() => history.push(`${match.url}${linkUrl}`)}>
+          SHOP NOW
+        </ContentSubtitle>
       </ContentContainer>
     </MainPhotoContainer>
   );

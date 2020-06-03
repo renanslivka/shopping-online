@@ -5,12 +5,19 @@ import MenuItem from "../menu-item/menu-item";
 import { connect } from "react-redux";
 import { selectDirectorySections } from "./../../redux/directory/directory.selector";
 import { createStructuredSelector } from "reselect";
-import { DirectoryMenuContainer } from "./directory.styles";
+import {
+  DirectoryMenuContainer,
+  FooterMainPhoto,
+  FooterMainPhotoContainer,
+} from "./directory.styles";
 import MainPhoto from "../main-photo/main-photo";
 
 const Directory = ({ sections }) => (
   <>
-    <MainPhoto></MainPhoto>
+    <MainPhoto />
+    <FooterMainPhotoContainer>
+      <FooterMainPhoto>FREE SHIPPING WORLWIDE</FooterMainPhoto>
+    </FooterMainPhotoContainer>
     <DirectoryMenuContainer>
       {sections.map(({ title, imageUrl, id, size, linkUrl }) => (
         <MenuItem

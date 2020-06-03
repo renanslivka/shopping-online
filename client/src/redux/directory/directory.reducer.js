@@ -3,24 +3,29 @@ const INITIAL_STATE = {
     {
       title: "hats",
       imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+      size: "large",
       id: 1,
       linkUrl: "shop/hats",
     },
     {
       title: "jackets",
-      imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+      imageUrl:
+        "https://youthincmag.com/wp-content/uploads/2019/11/Unisex-Jacket-Asos-1.jpg",
+      size: "large",
       id: 2,
       linkUrl: "shop/jackets",
     },
     {
       title: "sneakers",
       imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+      size: "large",
       id: 3,
       linkUrl: "shop/sneakers",
     },
     {
       title: "womens",
-      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+      imageUrl:
+        "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       size: "large",
       id: 4,
       linkUrl: "shop/womens",
