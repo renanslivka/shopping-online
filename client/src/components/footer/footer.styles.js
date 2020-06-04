@@ -97,12 +97,9 @@ export const EmailTitle = styled.span`
 `;
 
 export const CopyrightContainer = styled.div`
-  position: relative;
-  margin: 0px 0px 39px calc((100% - 480px) * 0.5);
-  left: 200px;
-  grid-area: 4 / 1 / 5 / 2;
-  justify-self: start;
-  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 `;
 
 export const Copyright = styled.span`
