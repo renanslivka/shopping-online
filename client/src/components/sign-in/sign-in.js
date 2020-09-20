@@ -5,6 +5,8 @@ import {
   SignInContainer,
   ButtonsBarContainer,
   SignInTitle,
+  SignUpLinkContaniner,
+  SignUpLink,
 } from "./sign-in.styles";
 import {
   googleSignInStart,
@@ -63,6 +65,9 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
           </CustomButton>
         </ButtonsBarContainer>
       </form>
+      <SignUpLinkContaniner>
+        <SignUpLink to="signup">I do not have a account</SignUpLink>
+      </SignUpLinkContaniner>
     </SignInContainer>
   );
 };

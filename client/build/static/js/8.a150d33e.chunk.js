@@ -1,0 +1,2 @@
+(this["webpackJsonpshopping-online"]=this["webpackJsonpshopping-online"]||[]).push([[8],{125:function(e,t,n){},126:function(e,t,n){"use strict";n.r(t);var o=n(0),i=n.n(o);n(125);t.default=function(){return i.a.createElement("center",null,i.a.createElement("iframe",{className:"iframe",scrolling:"no",title:"Contact",src:"https://docs.google.com/forms/d/e/1FAIpQLScV1lBdUWjz12stzozHYYTdb7Kv3698odggzG9O3QlEDoTsEQ/viewform?embedded=true",width:"640",height:"911",frameborder:"0",marginheight:"0",marginwidth:"0"},"Contact"))}}}]);
+//# sourceMappingURL=8.a150d33e.chunk.js.map

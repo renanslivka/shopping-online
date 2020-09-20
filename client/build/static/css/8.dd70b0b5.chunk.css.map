@@ -1,0 +1,1 @@
+{"version":3,"sources":["contact.style.css"],"names":[],"mappings":"AAAA,QACE,oCACE,gBAAiB,CAAjB,kBAAiB,CAAjB,iBAAiB,CAAjB,eAAiB,CACjB,UACF,CACF","file":"8.dd70b0b5.chunk.css","sourcesContent":[".iframe {\r\n  @media screen and (max-width: 800px) {\r\n    margin: 10px auto;\r\n    width: 100%;\r\n  }\r\n}\r\n"]}

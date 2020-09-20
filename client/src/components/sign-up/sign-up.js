@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import FormInput from "../form-input/form-input";
 import CustomButton from "../custom-button/custom-button";
 
-import "./sign-up.scss";
+import "./sign-up.css";
 import { SignUpTitle, SignUpContainer } from "./sign-up.styles";
 import { connect } from "react-redux";
 import { signUpStart } from "./../../redux/user/user.action";

@@ -7,7 +7,6 @@ import { SignInSignUpContainer } from "./sign-in-sign-up.styles";
 const SignInSignUp = () => (
   <SignInSignUpContainer>
     <SignIn />
-    <SignUp />
   </SignInSignUpContainer>
 );
 

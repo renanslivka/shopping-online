@@ -2,7 +2,7 @@
   "name": "shopping-online",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://localhost:5000/",
+  "proxy": "https://shopping-online-server.herokuapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

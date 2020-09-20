@@ -29,7 +29,7 @@ export const SocialNetworkTitle = styled.div`
 export const SocialNetworkContainer = styled.div`
   position: relative;
   margin: 60px 0px 20px calc((100% - 950px) * 0.5);
-  left: 49px;
+  left: 46px;
   grid-area: 1 / 1 / 2 / 2;
   justify-self: start;
   align-self: start;
