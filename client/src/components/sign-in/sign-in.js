@@ -13,6 +13,7 @@ import {
   emailSignInStart,
 } from "../../redux/user/user.action";
 import { connect } from "react-redux";
+import { Form } from "../sign-up/sign-up.styles";
 
 const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   const [userCredentials, setCredentials] = useState({
@@ -37,7 +38,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
       <SignInTitle>I already have an account</SignInTitle>
       <span>Sign in with your email and password</span>
 
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <FormInput
           name="email"
           type="email"
@@ -64,7 +65,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
             Sign in with Google
           </CustomButton>
         </ButtonsBarContainer>
-      </form>
+      </Form>
       <SignUpLinkContaniner>
         <SignUpLink to="signup">I do not have a account</SignUpLink>
       </SignUpLinkContaniner>

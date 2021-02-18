@@ -6,10 +6,11 @@ export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 180px auto;
+  margin: 10px auto;
+  min-height: calc(100vh - 79px - 215.5px);
   @media screen and (max-width: 800px) {
-    margin: 110px auto;
     width: 80%;
+    min-height: calc(100vh - 55px - 310px);
   }
 `;
 

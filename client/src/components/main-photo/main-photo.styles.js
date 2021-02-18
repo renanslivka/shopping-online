@@ -60,7 +60,7 @@ export const ContentSubtitle = styled.span`
   height:36px;
   background-color: #303132;
   justify-content: center;
-  
+  margin: 0 10px 5px 10px;
   display: flex;
   align-items: center;
   &:hover {

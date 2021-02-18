@@ -16,7 +16,7 @@ const Directory = ({ sections }) => (
   <>
     <MainPhoto />
     <FooterMainPhotoContainer>
-      <FooterMainPhoto>FREE SHIPPING WORLWIDE</FooterMainPhoto>
+      <FooterMainPhoto>FREE SHIPPING WORLDWIDE</FooterMainPhoto>
     </FooterMainPhotoContainer>
     <DirectoryMenuContainer>
       {sections.map(({ title, imageUrl, id, size, linkUrl }) => (

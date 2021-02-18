@@ -16,6 +16,7 @@ export const TitleContainer = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   color: black;
+  width: 50px;
   &:hover {
     color: grey;
   }

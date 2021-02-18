@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Form = styled.form`
+
+`;
+
 export const SignUpContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,7 +11,7 @@ export const SignUpContainer = styled.div`
   justify-content: center;
   margin: 180px auto;
   @media screen and (max-width: 800px) {
-    margin: 110px auto;
+    margin: 10px auto;
     width: 80%;
   }
 `;

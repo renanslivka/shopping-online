@@ -1,7 +1,7 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import Header from "./components/header/header";
+import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import { connect } from "react-redux";
 import { checkUserSession } from "./redux/user/user.action";
@@ -29,7 +29,7 @@ const App = ({ checkUserSession, currentUser }) => {
   return (
     <div>
       <GlobalStyle />
-      <Header />
+      <Navbar />
       {/* currentUser is null or it is Object! */}
       <Switch>
         <ErrorBoundary>
