@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import CustomButton from "../custom-button/custom-button";
+import { Link } from "react-router-dom";
 
-export const CollectionItemContainer = styled.div`
+export const CollectionItemContainer = styled(Link)`
   width: 22vw;
   display: flex;
   flex-direction: column;

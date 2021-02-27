@@ -10,10 +10,16 @@ import {
   AddButton,
 } from "./collection-item.styles";
 
-const CollectionItem = ({ item, addItem }) => {
+const CollectionItem = ({ item, addItem, collectionName, match }) => {
   const { name, price, imageUrl } = item;
   return (
-    <CollectionItemContainer>
+    <CollectionItemContainer
+      to={
+        match
+          ? `${match.path}/${collectionName.toLowerCase()}/${item.id}`
+          : `${collectionName.toLowerCase()}/${item.id}`
+      }
+    >
       <BackgroundImage className="image" imageUrl={imageUrl} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>

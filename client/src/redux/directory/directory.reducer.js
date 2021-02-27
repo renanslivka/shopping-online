@@ -37,6 +37,14 @@ const INITIAL_STATE = {
       id: 5,
       linkUrl: "shop/mens",
     },
+    {
+      title: "rings",
+      imageUrl:
+        "https://i.pinimg.com/originals/b3/59/cb/b359cb5f06e5c9d0099bb0c42f1b3235.jpg",
+      size: "large",
+      id: 6,
+      linkUrl: "shop/rings",
+    },
   ],
 };
 

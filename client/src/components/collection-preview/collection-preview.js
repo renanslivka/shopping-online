@@ -6,7 +6,7 @@ import {
   PreviewContainer,
 } from "./collection-preview.styles";
 
-const CollectionPreview = ({ title, items }) => (
+const CollectionPreview = ({ title, items, match }) => (
   <CollectionPreviewContainer>
     <TitleContainer to={`shop/${title.toLowerCase()}`}>
       {title.toUpperCase()}
@@ -15,7 +15,12 @@ const CollectionPreview = ({ title, items }) => (
       {items
         .filter((item, i) => i < 4)
         .map((item) => (
-          <CollectionItem key={item.id} item={item} />
+          <CollectionItem
+            key={item.id}
+            item={item}
+            collectionName={title}
+            match={match}
+          />
         ))}
     </PreviewContainer>
   </CollectionPreviewContainer>

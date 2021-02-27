@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <Nav>
       <LogoContainer to="/">
-        <Logo className="logo" />
+        <Logo />
       </LogoContainer>
       <BurgerMenu />
     </Nav>
