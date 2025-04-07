@@ -5,11 +5,28 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "chrome",
+      "type": "node",
       "request": "launch",
-      "name": "Launch Chrome against localhost",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}"
+      "name": "Server",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/server/server.js",
+      "cwd": "${workspaceFolder}/server",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Client",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "cwd": "${workspaceFolder}/client",
+      "serverReadyAction": {
+        "pattern": "Local:\\s+(https?://\\S+)",
+        "uriFormat": "http://localhost:3000",
+        "action": "debugWithChrome"
+      }
     }
   ]
 }
